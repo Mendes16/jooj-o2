@@ -1,11 +1,11 @@
 ﻿<!-- ## !!ADICIONE O CABECALHO E O RODAPE PARA ESTA PAGINA -->
 <!-- Use o controladorProduto.php para encaminhar os dados do seu cadastro -->
-
+<?php require_once "cabecalho.php" ?>
 <h2>Cadastro de Produtos</h2>
-<form action="#" method="post">
+<form action="../../controllers/controladorProduto.php?action=cadastrar" method="post">
     <div class="form-group">
         <label for="produto">Produto:</label>
-        <input name="titulo" type="text" class="form-control" id="produto" aria-describedby="nome produto" placeholder="">
+        <input name="nome" type="text" class="form-control" id="produto" aria-describedby="nome produto" placeholder="">
     </div>
 
     <div class="form-group">
@@ -21,12 +21,13 @@
     <div class="form-group">
         <label for="Categoria">Categoria</label>
         <select name="categoria" class="form-control" id="Categoria">
-            <option>Fruta</option>
-            <option>Legume</option>
-            <option>Hortaliça</option>
+            <option>Camisa</option>
+            <option>calça</option>
+            <option>Cueca</option>
         </select>
     </div>
 
     <button type="submit" class="btn btn-primary">Cadastrar</button>
 
 </form>
+<?php require_once "rodape.php" ?>

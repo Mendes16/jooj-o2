@@ -16,11 +16,12 @@ class Produto {
     public $categoria;
     public $quantidadeEstoque;
 
-    public function __construct($nome, $preco, $categoria, $estoque){ //estoque
+    public function __construct($nome, $preco, $categoria, $estoque, $codigo = null){
         $this->nome = $nome;
         $this->preco = $preco;
         $this->categoria = $categoria;
         $this->quantidadeEstoque = $estoque;
+        $this->codigo = $codigo;
     }
 
     public function estaDisponivel(){

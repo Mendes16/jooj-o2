@@ -1,13 +1,13 @@
 <?php
 
-    require_once "?/CrudProdutos.php";
-
+    require_once "../models/CrudProdutos.php";
+    require_once "../models/Produto.php";
     $crud = new CrudProdutos();
 
     //seguranca
     $codigo = filter_input(INPUT_GET, 'codigo', FILTER_VALIDATE_INT); //consulte os slides.
 
-    $produto = ?;
+
 
 ?>
 
@@ -67,13 +67,13 @@
         <div class="col-md-7">
             <div class="row">
                 <div class="col-md-12">
-                    <h2><?= $produto->titulo; ?></h2>
+                    <h2><?= $produto->nome; ?></h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <span class="badge badge-primary">mostre a categoria</span>
-                    <span class="badge badge-warning">mostre a disponibilidade</span>
+                    <span class="badge badge-primary"><?= $prod->categoria?></span>
+                    <span class="badge badge-warning"><?= $prod->estaDisponivel($disponivel) ?></span>
                 </div>
             </div>
             <!-- end row -->

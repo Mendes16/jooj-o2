@@ -6,7 +6,7 @@
     $listaProdutos = $crud->getProdutos();
 
     ## !!ADICIONE AQUI O CABECALHO DA PAGINA
-require_once 'cabecalho.php';
+require_once "cabecalho.php";
 ?>
 
 <!--Barra de busca-->
@@ -24,7 +24,7 @@ require_once 'cabecalho.php';
     <thead>
     <tr>
         <th>#</th>
-        <th>Título</th>
+        <th>Nome</th>
         <th>Preço</th>
         <th>Estoque</th>
         <th>Categoria</th>
@@ -34,11 +34,11 @@ require_once 'cabecalho.php';
     <tbody>
     <?php foreach ($listaProdutos as $produto): ?>
     <tr>
-        <th scope="row">mostre o código do produto</th>
-        <td>##mostre o nome</td>
-        <td>##mostre o preco</td>
-        <td>##mostre o estoque</td>
-        <td>##mostre a categoria</td>
+        <th scope="row"><?=$produto->codigo?></th>
+        <td><?=$produto->nome?></td>
+        <td><?=$produto->preco?></td>
+        <td><?=$produto->quantidadeEstoque?></td>
+        <td><?=$produto->categoria?></td>
         <td>##editar | remover</td>
     </tr>
    <?php endforeach; ?>
@@ -47,5 +47,4 @@ require_once 'cabecalho.php';
 </table>
 
 <!-- ## ADICIONE AQUI O RODAPE DA PAGINA -->]
-<?php require_once 'rodape.php';
-?>
+<?php require_once "rodape.php"; ?>
